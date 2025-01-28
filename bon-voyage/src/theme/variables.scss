@@ -4,16 +4,17 @@
 
 @font-face {
     font-family: "funnelsans";
-    src: url("../assets/FunnelSans-VariableFont_wght.ttf")
+    src: url("../assets/Funnel_Sans,Indie_Flower,Patrick_Hand,Truculenta/Funnel_Sans/static/FunnelSans-Regular.ttf")
   }
 
 
-  @font-face {
-    font-family: "indieflower";
-    src: url("../assets/Indie_Flower/IndieFlower-Regular.ttf");
-  }
 
   @font-face {
     font-family: "patrick";
-    src: url("../assets/Patrick_Hand/PatrickHand-Regular.ttf");
+    src: url("../assets/Funnel_Sans,Indie_Flower,Patrick_Hand,Truculenta/Patrick_Hand/PatrickHand-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "truculenta";
+    src: url("../assets/Funnel_Sans,Indie_Flower,Patrick_Hand,Truculenta/Truculenta/Truculenta-VariableFont_opsz,wdth,wght.ttf");
   }
