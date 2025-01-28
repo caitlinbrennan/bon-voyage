@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+
+@font-face {
+    font-family: "funnelsans";
+    src: url("../assets/FunnelSans-VariableFont_wght.ttf")
+  }
+
+
+  @font-face {
+    font-family: "indieflower";
+    src: url("../assets/Indie_Flower/IndieFlower-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "patrick";
+    src: url("../assets/Patrick_Hand/PatrickHand-Regular.ttf");
+  }
