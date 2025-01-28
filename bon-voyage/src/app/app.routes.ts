@@ -11,23 +11,15 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
   },
   {
-    path: 'bookmarks',
-    loadComponent: () => import('./bookmarks/bookmarks.page').then( m => m.BookmarksPage)
-  },
-  {
     path: 'lists',
     loadComponent: () => import('./lists/lists.page').then( m => m.ListsPage)
   },
   {
-    path: 'bookmarks',
+    path: 'activities',
     loadComponent: () => import('./bookmarks/bookmarks.page').then( m => m.BookmarksPage)
   },
   {
     path: 'locations',
-    loadComponent: () => import('./locations/locations.page').then( m => m.LocationsPage)
-  },
-  {
-    path: 'bookmarks',
     loadComponent: () => import('./bookmarks/bookmarks.page').then( m => m.BookmarksPage)
   },
 ];

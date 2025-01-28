@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import * as L from "leaflet";
 
 import { Tab2Page } from './tab2.page';
 

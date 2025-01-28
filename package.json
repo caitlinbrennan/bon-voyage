@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@capacitor/android": "^7.0.1",
-    "@supabase/supabase-js": "^2.48.0"
+    "@supabase/supabase-js": "^2.48.0",
+    "leaflet": "^1.9.4"
   }
 }
