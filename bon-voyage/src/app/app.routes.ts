@@ -22,4 +22,8 @@ export const routes: Routes = [
     path: 'locations',
     loadComponent: () => import('./bookmarks/bookmarks.page').then( m => m.BookmarksPage)
   },
+  {
+    path: 'new',
+    loadComponent: () => import('./new/new.page').then( m => m.NewPage)
+  },
 ];

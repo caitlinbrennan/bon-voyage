@@ -1,8 +1,11 @@
 .add{
     float: right;
     padding-right: 3%;
-    padding-top: 65.5%;
+    padding-top: 63.1%;
     --background: rgb(81, 15, 15);
+}
+
+.addbutton{
     color: rgb(209, 131, 131);
 }
 
@@ -16,4 +19,5 @@ ion-content{
 
 ion-title{
     font-family: "patrick";
+    color: rgb(81, 15, 15);
 }
