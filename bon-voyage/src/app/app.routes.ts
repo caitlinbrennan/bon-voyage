@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
+    loadChildren: () => import('./tabs/tabs.routes').then(m => m.routes),
   },
   {
     path: 'login',
