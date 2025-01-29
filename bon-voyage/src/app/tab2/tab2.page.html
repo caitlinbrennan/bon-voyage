@@ -9,42 +9,55 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Bon Voyage</ion-title>
+      <ion-title size="large" style="padding-left:29%;">Bon Voyage</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-searchbar></ion-searchbar>
 
+  <h2 style="padding-left:4%;">Popular Destinations</h2>
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>Popular</ion-card-title>
-    </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
           </ion-thumbnail>
           <ion-label>Item</ion-label>
           <ion-button>View</ion-button>
         </ion-item>
-  
-        <ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
           </ion-thumbnail>
           <ion-label>Item</ion-label>
           <ion-button>View</ion-button>
         </ion-item>
-  
-        <ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
           </ion-thumbnail>
           <ion-label>Item</ion-label>
           <ion-button>View</ion-button>
         </ion-item>
-  
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
         <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
@@ -57,7 +70,7 @@
   </ion-card>
 
   <h2>Map</h2>
-  <p>Select location on the map to view information!</p>
+  <p class="mapdetails">Select location on the map to view information!</p>
 
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
