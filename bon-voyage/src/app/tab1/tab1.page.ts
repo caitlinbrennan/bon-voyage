@@ -19,3 +19,15 @@ export class Tab1Page {
     addIcons({ arrowForward });
   }
 }
+/*export class HomePage implements OnInit{
+  tableData: any[] = [];
+  constructor(private supabaseService: SupabaseService) {}
+
+  async ngOnInit() {
+      await this.loadData();
+  }
+  async loadData() {
+    const tableData = await this.supabaseService.getData('upcoming_trips');
+      console.log('Data from Supabase:', this.tableData);
+  }
+}*/
