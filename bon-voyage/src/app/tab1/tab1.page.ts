@@ -3,7 +3,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonItem, IonLabel, IonList, IonThumbnail, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { arrowForward } from 'ionicons/icons';
+import { arrowForward, personCircleOutline} from 'ionicons/icons';
 import { SupabaseService } from '../services/supabase.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class Tab1Page {
   public environmentInjector = inject(EnvironmentInjector);
 
   constructor() {
-    addIcons({ arrowForward });
+    addIcons({ arrowForward, personCircleOutline });
   }
 }
 /*export class HomePage implements OnInit{
