@@ -1,0 +1,37 @@
+ion-icon{
+    color: rgb(81, 15, 15);
+}
+
+ion-content{
+    --ion-background-color: rgb(255, 243, 244);
+} 
+
+ion-card{
+    --ion-background-color: rgb(236, 190, 190);
+}
+
+ion-list{
+    font-family: "funnelsans";
+}
+
+ion-title{
+    font-family: "patrick";
+    color: rgb(81, 15, 15);
+    padding-left: 40%;
+    padding-top: 10%;
+}
+
+.profile{
+    position: absolute;
+    padding-bottom: 8.5%;
+    padding-left: 45%;
+}
+
+.confirm{
+    float: right;
+    padding-right: 3%;
+    padding-top: 86.5%;
+    padding-bottom: 2%;
+    --background: rgb(81, 15, 15);
+    color: rgb(209, 131, 131);
+}

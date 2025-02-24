@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { ListsPage } from './lists/lists.page';
 
 export const routes: Routes = [
   {
@@ -9,10 +10,6 @@ export const routes: Routes = [
   {
     path: 'login',
     loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
-  },
-  {
-    path: 'lists',
-    loadComponent: () => import('./lists/lists.page').then( m => m.ListsPage)
   },
   {
     path: 'activities',

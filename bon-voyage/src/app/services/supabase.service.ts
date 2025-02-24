@@ -1,24 +1,80 @@
-import { Injectable } from '@angular/core';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { Injectable } from '@angular/core'
+import { LoadingController, ToastController } from '@ionic/angular'
+import { AuthChangeEvent, createClient, Session, SupabaseClient } from '@supabase/supabase-js'
+import { environment } from 'src/environments/environment'
+
+export interface Profile {
+  username: string
+  website: string
+  avatar_url: string
+}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SupabaseService {
-  private supabase: SupabaseClient;
+  /*private supabase: SupabaseClient
 
-  constructor() { 
-    const supabaseUrl = 'https://aoesmwcahajxuceweegh.supabase.co'
-    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZXNtd2NhaGFqeHVjZXdlZWdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc0NTUzNTIsImV4cCI6MjA1MzAzMTM1Mn0.5VS7oPNphGRA-naaxCcUSvocQ_5ozh4-R68m4Bxswqw';
-
-    this.supabase = createClient(supabaseUrl, supabaseAnonKey);
+  constructor(
+    private loadingCtrl: LoadingController,
+    private toastCtrl: ToastController
+  ) {
+    this.supabase = createClient(environment.supabaseKey, environment.supabaseUrl)
   }
 
-  async getData(tablename: string) {
-    const { data, error } = await this.supabase.from(tablename).select('*');
-    if (error) {
-      console.error('Error fetching data:', error);
+  get user() {
+    return this.supabase.auth.getUser().then(({ data }) => data?.user)
+  }
+
+  get session() {
+    return this.supabase.auth.getSession().then(({ data }) => data?.session)
+  }
+
+  get profile() {
+    return this.user
+      .then((user) => user?.id)
+      .then((id) =>
+        this.supabase.from('profiles').select(`username, website, avatar_url`).eq('id', id).single()
+      )
+  }
+
+  authChanges(callback: (event: AuthChangeEvent, session: Session | null) => void) {
+    return this.supabase.auth.onAuthStateChange(callback)
+  }
+
+  signIn(email: string) {
+    return this.supabase.auth.signInWithOtp({ email })
+  }
+
+  signOut() {
+    return this.supabase.auth.signOut()
+  }
+
+  async updateProfile(profile: Profile) {
+    const user = await this.user
+    const update = {
+      ...profile,
+      id: user?.id,
+      updated_at: new Date(),
     }
-    return data;
+
+    return this.supabase.from('profiles').upsert(update)
   }
+
+  downLoadImage(path: string) {
+    return this.supabase.storage.from('avatars').download(path)
+  }
+
+  uploadAvatar(filePath: string, file: File) {
+    return this.supabase.storage.from('avatars').upload(filePath, file)
+  }
+
+  async createNotice(message: string) {
+    const toast = await this.toastCtrl.create({ message, duration: 5000 })
+    await toast.present()
+  }
+
+  createLoader() {
+    return this.loadingCtrl.create()
+  }*/
 }
