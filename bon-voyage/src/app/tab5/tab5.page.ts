@@ -3,7 +3,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonItem, IonLabel, IonList, IonThumbnail, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { addCircle, arrowForward } from 'ionicons/icons';
+import { addCircle, arrowForward, personCircleOutline } from 'ionicons/icons';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,6 @@ export class Tab5Page {
   public environmentInjector = inject(EnvironmentInjector);
 
   constructor( ) {
-    addIcons({ addCircle, arrowForward });
+    addIcons({ addCircle, arrowForward, personCircleOutline });
   }
 }
